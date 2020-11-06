@@ -10,7 +10,7 @@ console.log(
     " years old."
 );
 
-// ======================================
+// ===================================================
 // keeping the variable with the code that it is used with in lieu of placing it atop the code.
 
 //2 concatenation using +=. In the code below I am declaring a string with the value 'Hello' and where str += '' is a shorthand for str = str + '' THEN below that we add 'World' to the Just created 'Hello' string to create 'Hello World'. 
@@ -43,11 +43,8 @@ function concatFunction2() {
   document.getElementById("concat2").innerHTML = res;
 }
 
-//the typeof method shows the type of data that you are dealing with. Meaning string, number, boolean, null or undefined.
-console.log(typeof name);
-console.log(typeof age);
 
-// ===============================================
+// =====================================================
 // keeping the variable with the code that it is used with in lieu of placing it atop the code.
 //below is a variable for a template literal 
 const Hello = `My name is ${name} and I am ${age} years old.`;
@@ -58,3 +55,22 @@ console.log(`My name is ${name} and I am ${age} years old`);
 
 //   a template literal made into a variable that is then logged to the console
 console.log(Hello);
+
+//====================================================
+
+//the typeof method shows the type of data that you are dealing with. Meaning string, number, boolean, null or undefined.
+console.log(typeof name);
+console.log(typeof age);
+
+//using the length property below
+console.log(name.length);
+console.log(str);
+console.log(str.length);
+
+//using the toUpperCase method below
+console.log(name.toUpperCase());
+console.log(str.toUpperCase());
+
+//using the toLowerCase method below
+console.log(name.toLowerCase());
+console.log(str.toLowerCase());
