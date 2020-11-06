@@ -88,3 +88,6 @@ console.log(str.split(('')))
 const tech = 'computers, software, hardware, code';
 
 console.log(tech.split((', ')));
+
+//comments are shown with two // for single line comments 
+/* comments that are meant to span multiple lines are shown with /* and a corresponding */
