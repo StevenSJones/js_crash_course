@@ -119,8 +119,8 @@ fruits.pop();
 console.log(fruits);
 //to check if something is an array use isArray method
 console.log(Array.isArray(fruits));
-
-
+// use the indexOf method to find the location of an item in an array (also called  the index number). 
+console.log(fruits.indexOf('raspberries'));
 
 
 
