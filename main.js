@@ -91,3 +91,5 @@ console.log(tech.split((', ')));
 
 //comments are shown with two // for single line comments 
 /* comments that are meant to span multiple lines are shown with /* and a corresponding */
+
+//arrays = variables that hold multiple values, they are zero based in every language so they start with 0 and proceed to 1, etc. You can manipulate arrays when they are expressed as a const variable because the data will be manipulated and not changed. 
