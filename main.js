@@ -75,8 +75,16 @@ console.log(str.toUpperCase());
 console.log(name.toLowerCase());
 console.log(str.toLowerCase());
 
-// Using the substring method below
+// Using the substring method below which breaks the string in question into a substring and takes in the starting and ending point as parameters
 console.log(str.substring(3,8));
 
 // Using the substring AND toUpperCase methods below
 console.log(str.substring(3,8).toLocaleUpperCase());
+
+// Using the split method method to split a string into an array separated by letter below:
+console.log(str.split(('')))
+
+// Using the split method to split a group of strings into an array separated with a comma in between below:
+const tech = 'computers, software, hardware, code';
+
+console.log(tech.split((', ')));
