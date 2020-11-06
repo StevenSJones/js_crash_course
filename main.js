@@ -117,6 +117,8 @@ console.log(fruits);
 fruits.pop();
 
 console.log(fruits);
+//to check if something is an array use isArray method
+console.log(Array.isArray(fruits));
 
 
 
