@@ -74,3 +74,9 @@ console.log(str.toUpperCase());
 //using the toLowerCase method below
 console.log(name.toLowerCase());
 console.log(str.toLowerCase());
+
+// Using the substring method below
+console.log(str.substring(3,8));
+
+// Using the substring AND toUpperCase methods below
+console.log(str.substring(3,8).toLocaleUpperCase());
