@@ -92,4 +92,33 @@ console.log(tech.split((', ')));
 //comments are shown with two // for single line comments 
 /* comments that are meant to span multiple lines are shown with /* and a corresponding */
 
-//arrays = variables that hold multiple values, they are zero based in every language so they start with 0 and proceed to 1, etc. You can manipulate arrays when they are expressed as a const variable because the data will be manipulated and not changed. 
+//arrays = variables that hold multiple values, they are zero based in every language so they start with 0 and proceed to 1, etc. You can manipulate arrays when they are expressed as a const variable because the data will be manipulated and not reassigned. 
+const fruits = ['apples', 'oranges', 'pears', 'bananas', 'pomegranates', 'plantains', 'raspberries', 'strawberries', 'grapes', 'cherries'];
+
+//below I am printing out a the 5th item in the array, as arrays start with 0
+console.log(fruits[4]);
+
+// I added to the end of the array and because the array is NOT reassigned but instead manipulated  
+fruits[10] = 'mangoes';
+
+console.log(fruits);
+
+//Another way to add to the end of an array and because the array is NOT reassigned but instead manipulated  
+fruits.push('papayas');
+
+console.log(fruits);
+
+//unshift is used to add to the beginning of an array
+fruits.unshift('jackfruits');
+
+console.log(fruits);
+
+//pop is used to take the last item out of an array
+fruits.pop();
+
+console.log(fruits);
+
+
+
+
+
