@@ -149,10 +149,15 @@ const Person = {
  console.log(Person.Address.City);
  console.log(Person.Hobbies[5]);
 
- //destructuring - The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+ //destructuring - Part of ES6. The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
  const { FirstName, LastName, Address: { City } } = Person;
 
  console.log(FirstName, LastName, City);
+
+ Person.Email = 'ssjones.code@gmail.com';
+ 
+ console.log(Person);
+ 
 
 
 
