@@ -125,7 +125,7 @@ console.log(fruits.indexOf('raspberries'));
 
 //Object literals - A JavaScript object literal is a comma-separated list of name-value pairs wrapped in curly braces. Object literals encapsulate data, enclosing it in a tidy package. This minimizes the use of global variables which can cause problems when combining code.
 
-const person = {
+const Person = {
      FirstName: 'Steven',
      LastName: 'Jones',
      Age: 34,
@@ -138,12 +138,21 @@ const person = {
     }
 }
 //I used log method to print the person object to the console.
- console.log(person);
+ console.log(Person);
 
  //I used log method to print specific values from the object to the console.
- console.log(person.FirstName, person.LastName);
+ console.log(Person.FirstName, Person.LastName);
 
-//I used the . operator to print out other values to the console.
+ //I used the . operator to print out other values to the console.
+ console.log(Person.Hobbies[1], Person.Address.City, Person.Hobbies[5]);
+//or...
+ console.log(Person.Address.City);
+ console.log(Person.Hobbies[5]);
+
+ 
+
+
+
 
 
 
