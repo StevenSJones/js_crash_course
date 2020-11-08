@@ -92,6 +92,7 @@ console.log(tech.split((', ')));
 //comments are shown with two // for single line comments 
 /* comments that are meant to span multiple lines are shown with /* and a corresponding */
 
+//=====================================================
 //arrays = variables that hold multiple values, they are zero based in every language so they start with 0 and proceed to 1, etc. You can manipulate arrays when they are expressed as a const variable because the data will be manipulated and not reassigned. 
 const fruits = ['apples', 'oranges', 'pears', 'bananas', 'pomegranates', 'plantains', 'raspberries', 'strawberries', 'grapes', 'cherries'];
 
@@ -121,6 +122,31 @@ console.log(fruits);
 console.log(Array.isArray(fruits));
 // use the indexOf method to find the location of an item in an array (also called  the index number). 
 console.log(fruits.indexOf('raspberries'));
+
+//Object literals - A JavaScript object literal is a comma-separated list of name-value pairs wrapped in curly braces. Object literals encapsulate data, enclosing it in a tidy package. This minimizes the use of global variables which can cause problems when combining code.
+
+const person = {
+     FirstName: 'Steven',
+     LastName: 'Jones',
+     Age: 34,
+     Hobbies: ['coding', 'writing', 'fighting', 'hockey',
+    'drawing', 'eating', 'gaming', 'watching movies'],
+    Address: {
+        Street: '1600 Main st',
+        City: 'Boston',
+        State: 'MA'
+    }
+}
+//I used log method to print the person object to the console.
+ console.log(person);
+
+ //I used log method to print specific values from the object to the console.
+ console.log(person.FirstName, person.LastName);
+
+//I used the . operator to print out other values to the console.
+
+
+
 
 
 
