@@ -13,17 +13,17 @@ console.log(
 // ===================================================
 // keeping the variable with the code that it is used with in lieu of placing it atop the code.
 
-//2 concatenation using +=. In the code below I am declaring a string with the value 'Hello' and where str += '' is a shorthand for str = str + '' THEN below that we add 'World' to the Just created 'Hello' string to create 'Hello World'. 
-let str = 'Hello';
-str += ' ';
-str += 'World';
+//2 concatenation using +=. In the code below I am declaring a string with the value 'Hello' and where str += '' is a shorthand for str = str + '' THEN below that we add 'World' to the Just created 'Hello' string to create 'Hello World'.
+let str = "Hello";
+str += " ";
+str += "World";
 str; // 'Hello World'
 
 //3 Concatenation using the Array#join() function creates a new string from concatenating all elements in an array. The first parameter to join() is called the separator. By default, the separator is a single comma ','.
-['Hello', ' ', 'World'].join(''); // 'Hello World'
+["Hello", " ", "World"].join(""); // 'Hello World'
 
 // You can pass in any separator you want. Separators make Array#join() the preferred choice for concatenating strings if you find yourself repeating the same character over and over again. For example, you can use ' ' as the separator to join an array of words:
-['Twas', 'the', 'night', 'before', 'Christmas'].join(' ');
+["Twas", "the", "night", "before", "Christmas"].join(" ");
 
 //4 concatenation using the concat function. This method does not change the existing strings, but returns a new string containing the text of the joined strings.
 // DO NOT USE ON ARRAYS AS IT WILL CAUSE ERRORS.
@@ -43,12 +43,10 @@ function concatFunction2() {
   document.getElementById("concat2").innerHTML = res;
 }
 
-
 // =====================================================
 // keeping the variable with the code that it is used with in lieu of placing it atop the code.
-//below is a variable for a template literal 
+//below is a variable for a template literal
 const Hello = `My name is ${name} and I am ${age} years old.`;
-
 
 //template literals or template strings. This is a feature that came along with ES6. Use this and not template literals.
 console.log(`My name is ${name} and I am ${age} years old`);
@@ -76,41 +74,52 @@ console.log(name.toLowerCase());
 console.log(str.toLowerCase());
 
 // Using the substring method below which breaks the string in question into a substring and takes in the starting and ending point as parameters
-console.log(str.substring(3,8));
+console.log(str.substring(3, 8));
 
 // Using the substring AND toUpperCase methods below
-console.log(str.substring(3,8).toLocaleUpperCase());
+console.log(str.substring(3, 8).toLocaleUpperCase());
 
 // Using the split method method to split a string into an array separated by letter below:
-console.log(str.split(('')))
+console.log(str.split(""));
 
 // Using the split method to split a group of strings into an array separated with a comma in between below:
-const tech = 'computers, software, hardware, code';
+const tech = "computers, software, hardware, code";
 
-console.log(tech.split((', ')));
+console.log(tech.split(", "));
 
-//comments are shown with two // for single line comments 
+//comments are shown with two // for single line comments
 /* comments that are meant to span multiple lines are shown with /* and a corresponding */
 
 //=====================================================
-//arrays = variables that hold multiple values, they are zero based in every language so they start with 0 and proceed to 1, etc. You can manipulate arrays when they are expressed as a const variable because the data will be manipulated and not reassigned. 
-const fruits = ['apples', 'oranges', 'pears', 'bananas', 'pomegranates', 'plantains', 'raspberries', 'strawberries', 'grapes', 'cherries'];
+//arrays = variables that hold multiple values, they are zero based in every language so they start with 0 and proceed to 1, etc. You can manipulate arrays when they are expressed as a const variable because the data will be manipulated and not reassigned.
+const fruits = [
+  "apples",
+  "oranges",
+  "pears",
+  "bananas",
+  "pomegranates",
+  "plantains",
+  "raspberries",
+  "strawberries",
+  "grapes",
+  "cherries",
+];
 
 //below I am printing out a the 5th item in the array, as arrays start with 0
 console.log(fruits[4]);
 
-// I added to the end of the array and because the array is NOT reassigned but instead manipulated  
-fruits[10] = 'mangoes';
+// I added to the end of the array and because the array is NOT reassigned but instead manipulated
+fruits[10] = "mangoes";
 
 console.log(fruits);
 
-//Another way to add to the end of an array and because the array is NOT reassigned but instead manipulated  
-fruits.push('papayas');
+//Another way to add to the end of an array and because the array is NOT reassigned but instead manipulated
+fruits.push("papayas");
 
 console.log(fruits);
 
 //unshift is used to add to the beginning of an array
-fruits.unshift('jackfruits');
+fruits.unshift("jackfruits");
 
 console.log(fruits);
 
@@ -120,52 +129,74 @@ fruits.pop();
 console.log(fruits);
 //to check if something is an array use isArray method
 console.log(Array.isArray(fruits));
-// use the indexOf method to find the location of an item in an array (also called  the index number). 
-console.log(fruits.indexOf('raspberries'));
+// use the indexOf method to find the location of an item in an array (also called  the index number).
+console.log(fruits.indexOf("raspberries"));
 
 //Object literals - A JavaScript object literal is a comma-separated list of name-value pairs wrapped in curly braces. Object literals encapsulate data, enclosing it in a tidy package. This minimizes the use of global variables which can cause problems when combining code.
 
 const Person = {
-     FirstName: 'Steven',
-     LastName: 'Jones',
-     Age: 34,
-     Hobbies: ['coding', 'writing', 'fighting', 'hockey',
-    'drawing', 'eating', 'gaming', 'watching movies'],
-    Address: {
-        Street: '1600 Main st',
-        City: 'Boston',
-        State: 'MA'
-    }
-}
+  FirstName: "Steven",
+  LastName: "Jones",
+  Age: 34,
+  Hobbies: [
+    "coding",
+    "writing",
+    "fighting",
+    "hockey",
+    "drawing",
+    "eating",
+    "gaming",
+    "watching movies",
+  ],
+  Address: {
+    Street: "1600 Main st",
+    City: "Boston",
+    State: "MA",
+  },
+};
 //I used log method to print the person object to the console.
- console.log(Person);
+console.log(Person);
 
- //I used log method to print specific values from the object to the console.
- console.log(Person.FirstName, Person.LastName);
+//I used log method to print specific values from the object to the console.
+console.log(Person.FirstName, Person.LastName);
 
- //I used the . operator to print out other values to the console.
- console.log(Person.Hobbies[1], Person.Address.City, Person.Hobbies[5]);
+//I used the . operator to print out other values to the console.
+console.log(Person.Hobbies[1], Person.Address.City, Person.Hobbies[5]);
 //or...
- console.log(Person.Address.City);
- console.log(Person.Hobbies[5]);
+console.log(Person.Address.City);
+console.log(Person.Hobbies[5]);
 
- //destructuring - Part of ES6. The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
- const { FirstName, LastName, Address: { City } } = Person;
+//destructuring - Part of ES6. The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+const {
+  FirstName,
+  LastName,
+  Address: { City },
+} = Person;
 
- console.log(FirstName, LastName, City);
+console.log(FirstName, LastName, City);
 
- Person.Email = 'ssjones.code@gmail.com';
- 
- console.log(Person);
- 
+//to add to the object literal you can use the dot operator as well
+Person.Email = "ssjones.code@gmail.com";
 
+console.log(Person);
 
+//when dealing with an array of objects we can give the objects in the array an id to further .
+const todos = [
+  {
+    id: 1,
+    text: "drink protein",
+    isCompleted: false,
+  },
+  {
+    id: 2,
+    text: "walk Penny",
+    isCompleted: false,
+  },
+  {
+    id: 3,
+    text: "watch movie",
+    isCompleted: false,
+  },
+];
 
-
-
-
-
-
-
-
-
+console.log(todos[2].text);
