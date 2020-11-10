@@ -1,3 +1,9 @@
+// **Equal to (=)** is an assignment operator, which sets the variable on the left of the = to the value of the expression that is on its right. This operator assigns lvalue to rvalue.
+
+// **Double equals (==)** is a comparison operator which transforms the operands having the same type before comparison. Meaning, when you compare string with a number JavaScript converts any string to a number. An empty string is always converted to zero. A string with no numeric value is converted to NaN (Not a Number), which returns false.
+
+// **Triple equals (===)**  is a strict equality comparison operator in JavaScript, which returns false for the values which are not of a similar type. This operator performs type casting for equality. If we compare 2 with "2" using ===, then it will return a false value.
+
 const name = "Steven";
 const age = 34;
 
@@ -298,8 +304,10 @@ console.log(todoCompleted);
 // “If” statements: where if a condition is true it is used to specify execution for a block of code.
 // “Else” statements: where if the same condition is false it specifies the execution for a block of code.
 // “Else if” statements: this specifies a new test if the first condition is false.
-  const x = 10;
+  const x = 9;
 
   if(x === 10) {
       console.log('x is equal to 10!');
-  }
+  } else if(x < 10) {
+    console.log('x is less then 10')
+  } 
