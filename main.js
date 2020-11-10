@@ -290,3 +290,16 @@ const todoCompleted = todos
 console.log(todoCompleted);
 
 //==================================================
+//conditionals
+// Conditional statements control behavior in JavaScript and determine whether or not pieces of code can run.
+
+// There are multiple different types of conditionals in JavaScript including:
+
+// “If” statements: where if a condition is true it is used to specify execution for a block of code.
+// “Else” statements: where if the same condition is false it specifies the execution for a block of code.
+// “Else if” statements: this specifies a new test if the first condition is false.
+  const x = 10;
+
+  if(x === 10) {
+      console.log('x is equal to 10!');
+  }
