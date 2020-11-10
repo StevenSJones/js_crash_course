@@ -252,5 +252,16 @@ for (let i = 0; i < cars.length; i++) {
 }
 //===========================================
 
+for(let i = 0; i < todos.length; i++){
+    console.log(todos[i].text);
+}
+//same as this but the latter is less verbose and therefor better.
+//In the for of loop the firts variable (todo in this case) could be anything BUT should be related to the array that is mentioned after the of portion of the loop (in this case our array is todos).
+for(let todo of todos){
+console.log(todo.text);
+//no need for (todo[i].text in the above statement!)
+} 
 
+//===============================================
+//high order array methods
 
