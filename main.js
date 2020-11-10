@@ -264,4 +264,12 @@ console.log(todo.text);
 
 //===============================================
 //high order array methods
+//forEach() -I am using forEach to iterate over each item in the todos array and then print out the todo text from the todos array
+todos.forEach(function(todo){
+console.log(todo.text);
+});
+
+
+
+
 
