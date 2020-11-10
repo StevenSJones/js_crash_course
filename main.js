@@ -265,9 +265,18 @@ console.log(todo.text);
 //===============================================
 //high order array methods
 //forEach() -I am using forEach to iterate over each item in the todos array and then print out the todo text from the todos array
-todos.forEach(function(todo){
+todos.forEach(function(todo) {
 console.log(todo.text);
 });
+
+//map() - returns a new array containing what is specified. In this case it returns a new array with the name todoText that contains the todo text of the todos array 
+const todoText = todos.map(function(todo) {
+    return todo.text;
+    });
+
+    console.log(todoText);
+
+
 
 
 
