@@ -207,7 +207,7 @@ console.log(todos[2].text);
 const todoJSON = JSON.stringify(todos);
 //the console log will send this to the console and it will show "Array(3)" because I have three arrays in the object above called todos.
 console.log(todos);
-
+//===========================================
 //for loops:
 //instead of writing what we have below which is redundant and not dry (dry is an acronym that stands for Dont Repeat Yourself)
 
@@ -226,6 +226,16 @@ cars[3] = cars[3].toUpperCase();
 
 console.log(cars);
 
+//==============================================
+
+//while statements
+//The JavaScript while statement creates a loop that executes a block of code as long as the test condition evaluates to true . ... If the expression evaluates to true , the while statement executes the statement . If the expression evaluates to false , execution continues with the statement after the while loop.
+let i = 0;
+while(i < cars.length){
+    console.log(`While loop cars: ${cars[i]}`);
+    i++;
+}
+
 //for loop
 //this loop runs for the entire length of the cars array which is better than inserting a number in the place of the length because the for loop will automatically adjust to a new length (using the array.length method) if the length changes whereas a coder would need to go back in and insert the new length any place that there is a for loop iterating over the cars array if the length changed and we had a number in the place of length.
 for (i = 0; i < cars.length; i++) {
@@ -236,7 +246,11 @@ for (i = 0; i < cars.length; i++) {
     typeof cars
   );
 }
-//using a template literal in a for loop to iterate over a
-for (let i = 0; i <= 10; i++) {
-  console.log(`For loop Number: ${i}`);
+//using a template literal in a for loop to iterate over an array
+for (let i = 0; i < cars.length; i++) {
+  console.log(`For loop cars: ${cars[i]}`);
 }
+//===========================================
+
+
+
