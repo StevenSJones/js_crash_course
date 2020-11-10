@@ -368,7 +368,7 @@ switch (theColor) {
 
 // A JavaScript function is a block of code designed to perform a particular task. A JavaScript function is executed when "something" invokes it (calls it).
 
-//this is the function expression 
+//this is the function expression
 function addNums(num1, num2) {
   console.log(num1 + num2);
 }
@@ -391,3 +391,16 @@ function multiplyNumbers(num5, num6) {
 //function invocation (calling the function) with the call in a console.log so that it can be printed to the console.
 console.log(multiplyNumbers(37, 63));
 //=======
+
+//arrow function with console log in the function itself
+const divideNumbers = (num7, num8) => console.log(num7 / num8);
+
+//function invocation (calling the function)
+divideNumbers(100, 5);
+//=======
+
+//arrow function with return in the function. The word return logically would go after the fat arrow but if you place it there you will get an "unwxpected token error". So no need for the return word itself.
+const divide = (num9, num10) => num9 / num10;
+
+//function invocation (calling the function) with the call in a console.log so that it can be printed to the console.
+console.log(divide(100, 20));
