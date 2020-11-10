@@ -362,3 +362,23 @@ switch (theColor) {
     console.log("color is neither yellow nor black");
     break;
 }
+
+//===================================================
+//functions
+
+// A JavaScript function is a block of code designed to perform a particular task. A JavaScript function is executed when "something" invokes it (calls it).
+
+//this is the function expression 
+function addNums(num1, num2) {
+  console.log(num1 + num2);
+}
+//function invocation (calling the function)
+addNums(3, 6);
+
+//this is the function expression with default values set in the expression
+function addNums(num3 = 57, num4 = 78) {
+  console.log(num3 + num4);
+}
+//function invocation (calling the function)
+addNums();
+
