@@ -374,6 +374,7 @@ function addNums(num1, num2) {
 }
 //function invocation (calling the function)
 addNums(3, 6);
+//=======
 
 //this is the function expression with default values set in the expression
 function addNums(num3 = 57, num4 = 78) {
@@ -381,4 +382,12 @@ function addNums(num3 = 57, num4 = 78) {
 }
 //function invocation (calling the function)
 addNums();
+//=======
 
+//this is the function expression with a return (this is how it will likely be used in future instances).
+function multiplyNumbers(num5, num6) {
+  return num5 * num6;
+}
+//function invocation (calling the function) with the call in a console.log so that it can be printed to the console.
+console.log(multiplyNumbers(37, 63));
+//=======
