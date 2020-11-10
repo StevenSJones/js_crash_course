@@ -304,29 +304,40 @@ console.log(todoCompleted);
 // “If” statements: where if a condition is true it is used to specify execution for a block of code.
 // “Else” statements: where if the same condition is false it specifies the execution for a block of code.
 // “Else if” statements: this specifies a new test if the first condition is false.
-  const x = 11;
+const x = 11;
 
-  if(x === 10) {
-      console.log('x is equal to 10!');
-  } else if(x < 10) {
-    console.log('x is less then 10')
-  } else {
-    console.log("x is greater than 10");
-  }
+if (x === 10) {
+  console.log("x is equal to 10!");
+} else if (x < 10) {
+  console.log("x is less then 10");
+} else {
+  console.log("x is greater than 10");
+}
 
-  //multiple conditions with the OR (||)operator
-  const z = 11;
-  const y = 10;
+//multiple conditions with the OR (||)operator
+const z = 11;
+const y = 10;
 
-  if(z > 5 || y < 10) {
-      console.log('z is more than 5 OR y is more than 10');
-  } 
+if (z > 5 || y < 10) {
+  console.log("z is more than 5 OR y is more than 10");
+}
 
 const t = 3;
 const v = 16;
 
-  if(t > 5 && v < 10) {
-    console.log('t is more than 5 AND v is more than 10');
+if (t > 5 && v < 10) {
+  console.log("t is more than 5 AND v is more than 10");
 } else {
-  console.log('At least one of the following are not true: t is more than 5 AND v is more than 10')
-};
+  console.log(
+    "At least one of the following are not true: t is more than 5 AND v is more than 10"
+  );
+}
+
+//ternary operator (?)
+// The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark ( ? ), then an expression to execute if the condition is truthy followed by a colon ( : ), and finally the expression to execute if the condition is falsy.
+
+const s = 10;
+
+const color = s > 10 ? "red" : "blue";
+
+console.log(color);
