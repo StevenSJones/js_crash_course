@@ -190,7 +190,7 @@ const todos = [
   {
     id: 2,
     text: "walk Penny",
-    isCompleted: false,
+    isCompleted: true,
   },
   {
     id: 3,
@@ -231,9 +231,9 @@ console.log(cars);
 //while statements
 //The JavaScript while statement creates a loop that executes a block of code as long as the test condition evaluates to true . ... If the expression evaluates to true , the while statement executes the statement . If the expression evaluates to false , execution continues with the statement after the while loop.
 let i = 0;
-while(i < cars.length){
-    console.log(`While loop cars: ${cars[i]}`);
-    i++;
+while (i < cars.length) {
+  console.log(`While loop cars: ${cars[i]}`);
+  i++;
 }
 
 //for loop
@@ -252,33 +252,41 @@ for (let i = 0; i < cars.length; i++) {
 }
 //===========================================
 
-for(let i = 0; i < todos.length; i++){
-    console.log(todos[i].text);
+for (let i = 0; i < todos.length; i++) {
+  console.log(todos[i].text);
 }
 //same as this but the latter is less verbose and therefor better.
 //In the for of loop the firts variable (todo in this case) could be anything BUT should be related to the array that is mentioned after the of portion of the loop (in this case our array is todos).
-for(let todo of todos){
-console.log(todo.text);
-//no need for (todo[i].text in the above statement!)
-} 
+for (let todo of todos) {
+  console.log(todo.text);
+  //no need for (todo[i].text in the above statement!)
+}
 
 //===============================================
 //high order array methods
 //forEach() -I am using forEach to iterate over each item in the todos array and then print out the todo text from the todos array
-todos.forEach(function(todo) {
-console.log(todo.text);
+todos.forEach(function (todo) {
+  console.log(todo.text);
 });
 
-//map() - returns a new array containing what is specified. In this case it returns a new array with the name todoText that contains the todo text of the todos array 
-const todoText = todos.map(function(todo) {
+//map() - returns a new array containing what is specified. In this case it returns a new array with the name todoText that contains the todo text of the todos array
+const todoText = todos.map(function (todo) {
+  return todo.text;
+});
+
+console.log(todoText);
+
+//filter method - The filter() method creates an array filled with all array elements that pass a test (provided as a function).
+//with just the filter I got back the entire object of the todo that passed the test of "isCompleted".
+//with the map function added on, I got back just the text as asked for where I: return todo.text.
+const todoCompleted = todos
+  .filter(function (todo) {
+    return todo.isCompleted === true;
+  })
+  .map(function (todo) {
     return todo.text;
-    });
+  });
 
-    console.log(todoText);
+console.log(todoCompleted);
 
-
-
-
-
-
-
+//==================================================
