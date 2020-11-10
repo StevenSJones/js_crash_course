@@ -199,4 +199,9 @@ const todos = [
   },
 ];
 
+//to access a specific value from a specific item in the array we use dot notation
 console.log(todos[2].text);
+
+//JSON - used to send data to a server
+const todoJSON = JSON.stringify(todos);
+console.log(todos);
