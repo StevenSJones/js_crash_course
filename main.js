@@ -314,6 +314,9 @@ if (x === 10) {
   console.log("x is greater than 10");
 }
 
+//=======================================
+//logical operators
+
 //multiple conditions with the OR (||)operator
 const z = 11;
 const y = 10;
@@ -341,3 +344,21 @@ const s = 10;
 const color = s > 10 ? "red" : "blue";
 
 console.log(color);
+//=========================================
+//switch statements
+//The switch statement executes a block of code depending on different cases. The switch statement is a part of JavaScript's "Conditional" Statements, which are used to perform different actions based on different conditions. ... The switch statement is often used together with a break or a default keyword (or both).
+const r = 20;
+
+const theColor = r > 10 ? "yellow" : "black";
+
+switch (theColor) {
+  case "yellow":
+    console.log("The color is yellow");
+    break;
+  case "black":
+    console.log("The color is black");
+    break;
+  default:
+    console.log("color is neither yellow nor black");
+    break;
+}
