@@ -304,10 +304,12 @@ console.log(todoCompleted);
 // “If” statements: where if a condition is true it is used to specify execution for a block of code.
 // “Else” statements: where if the same condition is false it specifies the execution for a block of code.
 // “Else if” statements: this specifies a new test if the first condition is false.
-  const x = 9;
+  const x = 11;
 
   if(x === 10) {
       console.log('x is equal to 10!');
   } else if(x < 10) {
     console.log('x is less then 10')
-  } 
+  } else {
+    console.log("x is greater than 10");
+  }
