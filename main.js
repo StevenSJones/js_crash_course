@@ -404,3 +404,9 @@ const divide = (num9, num10) => num9 / num10;
 
 //function invocation (calling the function) with the call in a console.log so that it can be printed to the console.
 console.log(divide(100, 20));
+//======
+
+//fat arrow function with a forEach method that console.logs out my todos from the array called todo
+todos.forEach((todo) => console.log(todo));
+
+
