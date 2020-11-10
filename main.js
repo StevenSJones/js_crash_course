@@ -48,10 +48,10 @@ function concatFunction2() {
 //below is a variable for a template literal
 const Hello = `My name is ${name} and I am ${age} years old.`;
 
-//template literals or template strings. This is a feature that came along with ES6. Use this and not template literals.
+//template literals or template strings. This is a feature that came along with ES6. Use this and not concatenation.
 console.log(`My name is ${name} and I am ${age} years old`);
 
-//   a template literal made into a variable that is then logged to the console
+//a template literal made into a variable that is then logged to the console
 console.log(Hello);
 
 //====================================================
@@ -211,7 +211,7 @@ console.log(todos);
 //for loops:
 //instead of writing what we have below which is redundant and not dry (dry is an acronym that stands for Dont Repeat Yourself)
 
-const cars = [''];
+const cars = [""];
 
 cars[0] = "Astin Martin";
 cars[1] = "porshe";
@@ -227,14 +227,16 @@ cars[3] = cars[3].toUpperCase();
 console.log(cars);
 
 //for loop
-//this loop runs for the entire length of the cars array which is better than inserting a number in the place of the length because the for loop will automatically adjust to a new length (using the array.length method) if the length changes whereas a coder would need to go back in and insert the new length any place that there is a for loop iterating over the cars array if the length changed and we had a number in the place of length. 
-for(i = 0; i < cars.length; i++) {
-    console.log(JSON.stringify(cars[i]), Array.isArray(cars), cars.indexOf(cars[i]), typeof cars);
+//this loop runs for the entire length of the cars array which is better than inserting a number in the place of the length because the for loop will automatically adjust to a new length (using the array.length method) if the length changes whereas a coder would need to go back in and insert the new length any place that there is a for loop iterating over the cars array if the length changed and we had a number in the place of length.
+for (i = 0; i < cars.length; i++) {
+  console.log(
+    JSON.stringify(cars[i]),
+    Array.isArray(cars),
+    cars.indexOf(cars[i]),
+    typeof cars
+  );
 }
-
-for(i = 0; i < cars.length; i++) {
-    cars.toUppercase(cars[i])
+//using a template literal in a for loop to iterate over a
+for (let i = 0; i <= 10; i++) {
+  console.log(`For loop Number: ${i}`);
 }
-
-
-
