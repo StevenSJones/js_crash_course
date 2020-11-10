@@ -321,3 +321,12 @@ console.log(todoCompleted);
   if(z > 5 || y < 10) {
       console.log('z is more than 5 OR y is more than 10');
   } 
+
+const t = 3;
+const v = 16;
+
+  if(t > 5 && v < 10) {
+    console.log('t is more than 5 AND v is more than 10');
+} else {
+  console.log('At least one of the following are not true: t is more than 5 AND v is more than 10')
+};
