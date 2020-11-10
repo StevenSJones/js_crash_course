@@ -313,3 +313,11 @@ console.log(todoCompleted);
   } else {
     console.log("x is greater than 10");
   }
+
+  //multiple conditions with the OR (||)operator
+  const z = 11;
+  const y = 10;
+
+  if(z > 5 || y < 10) {
+      console.log('z is more than 5 OR y is more than 10');
+  } 
