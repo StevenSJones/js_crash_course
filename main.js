@@ -226,6 +226,15 @@ cars[3] = cars[3].toUpperCase();
 
 console.log(cars);
 
+//for loop
+//this loop runs for the entire length of the cars array which is better than inserting a number in the place of the length because the for loop will automatically adjust to a new length (using the array.length method) if the length changes whereas a coder would need to go back in and insert the new length any place that there is a for loop iterating over the cars array if the length changed and we had a number in the place of length. 
+for(i = 0; i < cars.length; i++) {
+    console.log(JSON.stringify(cars[i]), Array.isArray(cars), cars.indexOf(cars[i]), typeof cars);
+}
+
+for(i = 0; i < cars.length; i++) {
+    cars.toUppercase(cars[i])
+}
 
 
 
