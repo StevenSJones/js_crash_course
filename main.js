@@ -180,7 +180,7 @@ Person.Email = "ssjones.code@gmail.com";
 
 console.log(Person);
 
-//when dealing with an array of objects we can give the objects in the array an id to further .
+//when dealing with an array of objects we can give the objects in the array an id.
 const todos = [
   {
     id: 1,
@@ -203,5 +203,29 @@ const todos = [
 console.log(todos[2].text);
 
 //JSON - used to send data to a server
+//JSON.stringify is a method on the JSON object (todos in the case below) that make the JSON object readable
 const todoJSON = JSON.stringify(todos);
+//the console log will send this to the console and it will show "Array(3)" because I have three arrays in the object above called todos.
 console.log(todos);
+
+//for loops:
+//instead of writing what we have below which is redundant and not dry (dry is an acronym that stands for Dont Repeat Yourself)
+
+const cars = [''];
+
+cars[0] = "Astin Martin";
+cars[1] = "porshe";
+cars[2] = "Alpha Romeo";
+cars[3] = "bmw";
+cars[4] = "Lexus";
+cars[5] = "Mercedes";
+//this code changes the 4th item in the array; bmw, to uppercase ONLY in the console log
+console.log(cars[3].toUpperCase());
+//this code changes the 4th item in the array: cars, to uppercase in the array itself.
+cars[3] = cars[3].toUpperCase();
+
+console.log(cars);
+
+
+
+
