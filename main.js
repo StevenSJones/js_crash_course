@@ -419,5 +419,26 @@ const furtherAdditionOfNums = (n, p) => n + p;
 
 console.log(furtherAdditionOfNums(12,13));
 //======================================================
+//OOP - Object Oriented Programming
+
+//constructor functions with prototypes
+//below is a custon House constructor
+function House(color, floors, garage) {
+  this.color = color;
+  this.floors = floors;
+  this.garage = garage;
+}
+
+//instantiate object
+const house1 = new House('yellow', '2', 'true'); 
+const house2 = new House('pink', '1', 'true');
+const house3 = new House('blue', '3', 'false');
+
+//accessing the different parts of the object
+console.log(house1);
+console.log(house2.color);
+console.log(house3.garage);
+
+//constructor functions with ES6 classes
 
 
