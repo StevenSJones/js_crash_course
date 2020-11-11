@@ -160,6 +160,7 @@ const Person = {
     State: "MA",
   },
 };
+
 //I used log method to print the person object to the console.
 console.log(Person);
 
@@ -409,36 +410,46 @@ console.log(divide(100, 20));
 //fat arrow function with a forEach method that console.logs out my todos from the array called todo
 todos.forEach((todo) => console.log(todo));
 //=====================================================
-//function expression 
-const additionOfNums = function(o, q) {
+//function expression
+const additionOfNums = function (o, q) {
   return o + q;
-}
-console.log(additionOfNums(6,3));
+};
+console.log(additionOfNums(6, 3));
 //the same function that is above but in arrow function form
 const furtherAdditionOfNums = (n, p) => n + p;
 
-console.log(furtherAdditionOfNums(12,13));
+console.log(furtherAdditionOfNums(12, 13));
 //======================================================
 //OOP - Object Oriented Programming
 
 //constructor functions with prototypes
+//constructors use capital letters to indicate that they are indeed a constructor
+//prototypes use new as keyword
 //below is a custon House constructor
-function House(color, floors, garage) {
+function House(color, floors, garage, buildDate) {
   this.color = color;
   this.floors = floors;
   this.garage = garage;
+  //below I created a Date object using a constructor
+  this.buildDate = new Date(buildDate);
+  //below I am creating the function getBuildDate and defining what buildDate is.
+  this.getBuildDate = () => this.buildDate.getFullYear();
+  //below I am defining a new method called getColorAndGarage. It is a fuunction that returns the color and garage using template strings on this ocassion.
+  this.getColorAndGarage = () => `${this.color} ${this.garage}`;
 }
 
 //instantiate object
-const house1 = new House('yellow', '2', 'true'); 
-const house2 = new House('pink', '1', 'true');
-const house3 = new House('blue', '3', 'false');
+const house1 = new House("yellow", "2", "true", "5-8-1979");
+const house2 = new House("pink", "1", "true", "7-19-2010");
+const house3 = new House("blue", "3", "false", "10-17-1986");
 
 //accessing the different parts of the object
 console.log(house1);
 console.log(house2.color);
 console.log(house3.garage);
+//below I use the getBuildDate method created above
+console.log(house1.getBuildDate());
+//below I use the getColorAndGarage method created above
+console.log(house2.getColorAndGarage());
 
 //constructor functions with ES6 classes
-
-
