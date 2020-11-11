@@ -415,9 +415,8 @@ const additionOfNums = function(o, q) {
 }
 console.log(additionOfNums(6,3));
 //the same function that is above but in arrow function form
-const furtherAdditionOfNums = (n, p) => {
-  return n + p;
-}
+const furtherAdditionOfNums = (n, p) => n + p;
+
 console.log(furtherAdditionOfNums(12,13));
 //======================================================
 
