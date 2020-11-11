@@ -409,12 +409,16 @@ console.log(divide(100, 20));
 //fat arrow function with a forEach method that console.logs out my todos from the array called todo
 todos.forEach((todo) => console.log(todo));
 //=====================================================
-
+//function expression 
 const additionOfNums = function(o, q) {
   return o + q;
 }
 console.log(additionOfNums(6,3));
-
-
+//the same function that is above but in arrow function form
+const furtherAdditionOfNums = (n, p) => {
+  return n + p;
+}
+console.log(furtherAdditionOfNums(12,13));
+//======================================================
 
 
