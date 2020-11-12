@@ -479,7 +479,7 @@ console.log(house2.getColorAndGarage());
 
 console.log(window);
 
-window.alert(1);
+// window.alert(1);
 
 //single element selectors:
 //getElementById is a method on the document object
@@ -506,11 +506,14 @@ const ul = document.querySelector(".items");
 // ul.remove();
 // ul.lastElementChild.remove();
 //used the textContent method on the first el child of the items with the ul tag to change the text
-ul.firstElementChild.textContent = "Cheers";
+// ul.firstElementChild.textContent = "Cheers";
+
 //used the innerText method to change the text of the second child in with the tag ul to change the text
-ul.children[1].innerText = "Steven";
+// ul.children[1].innerText = "Steven";
+
 //used inner HTML to add HTML dynamically and change the text of the last el child with the tag ul
-ul.lastElementChild.innerHTML = "<h1>Ello Guvna</h1>";
+// ul.lastElementChild.innerHTML = "<h1>Ello Guvna</h1>";
+
 
 //dynamically changing elements styling by selecting it with the querySelector method and changing the style of btn to blue
 // const btn = document.querySelector('.btn');
@@ -521,17 +524,36 @@ ul.lastElementChild.innerHTML = "<h1>Ello Guvna</h1>";
 
 //Events=============================================
 //event listener
-const btn = document.querySelector(".btn");
+// const btn = document.querySelector(".btn");
 
-btn.addEventListener("click", (e) => {
-  e.preventDefault();
+// btn.addEventListener("click", (e) => {
+//   e.preventDefault();
   //placed e in the console log so that when the click happens I can look at the event object
   //i then grabbed the items last el child and changed the inner HTML that said ello guvna to hi there.
-  document.querySelector('#my-form').style.background = '#red'
-  document.querySelector('body').classList.add('bg-dark');
-  document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hi there</h1>';
-  document.querySelector('.items').firstElementChild.innerHTML = ('<h1>ello guvna</h1>');
-  // document.querySelector('.items').firstElementChild.fontcolor = ('red');
-});
+  // document.querySelector('#my-form').style.background = '#red'
+  // document.querySelector('body').classList.add('bg-dark');
+  // document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hi there</h1>';
 
+  // document.querySelector('.items').firstElementChild.innerHTML = ('<h1>ello guvna</h1>');
+
+  // document.querySelector('.items').firstElementChild.fontcolor = ('red');
+// });
+
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
+
+myForm.addEventListener('submit', onSubmit);
+
+function onSubmit(e) {
+  e.preventDefault();
+
+  if(nameInput.value === '' || emailInput.value === '') {
+    alert('Please enter fields');
+  } else {
+    console.log('success');
+  }
+}
 

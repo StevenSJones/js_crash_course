@@ -66,12 +66,12 @@
   
   .bg-dark {
     background: #333;
-    color: #fff;
+    color: black;
   }
 
   .red {
       background: red;
-      color: #fff;
+      color: black;
   }
   
   .error {
