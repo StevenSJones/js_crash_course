@@ -551,7 +551,7 @@ function onSubmit(e) {
   e.preventDefault();
 
   if(nameInput.value === '' || emailInput.value === '') {
-    alert('Please enter fields');
+    msg.innerHTML = 'Please enter all fields';
   } else {
     console.log('success');
   }
