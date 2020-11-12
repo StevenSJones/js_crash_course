@@ -425,19 +425,46 @@ console.log(furtherAdditionOfNums(12, 13));
 //constructor functions with prototypes
 //constructors use capital letters to indicate that they are indeed a constructor
 //prototypes use new as keyword
-//below is a custon House constructor
-function House(color, floors, garage, buildDate) {
-  this.color = color;
-  this.floors = floors;
-  this.garage = garage;
-  //below I created a Date object using a constructor
-  this.buildDate = new Date(buildDate);
-  //below I am creating the function getBuildDate and defining what buildDate is.
-  this.getBuildDate = () => this.buildDate.getFullYear();
-  //below I am defining a new method called getColorAndGarage. It is a fuunction that returns the color and garage using template strings on this ocassion.
-  this.getColorAndGarage = () => `${this.color} ${this.garage}`;
-}
+//below is a custon House constructor that creates a House object
 
+// function House(color, floors, garage, buildDate) {
+//   this.color = color;
+//   this.floors = floors;
+//   this.garage = garage;
+  //below I created a Date object using a constructor
+  // this.buildDate = new Date(buildDate);
+  //below I am creating the function getBuildDate and defining what buildDate is.
+  // this.getBuildDate = () => this.buildDate.getFullYear();
+  //below I am defining a new method called getColorAndGarage. It is a fuunction that returns the color and garage using template strings on this ocassion.
+//   this.getColorAndGarage = () => `${this.color} ${this.garage}`;
+// }
+
+
+
+//to create a prototype you type constructor.prototype.method then fat arrow and this.method.
+//The below code would replace line 436 and therefor remove the function from the constructor so that the function can be used in more instances and every object created with the constructor does NOT have to include the function(so it improves modularity in your code).
+// House.prototype.getBuildDate = () => this.buildDate.getFullYear();
+
+//The below code would replace line 438
+// House.prototype.getColorAndGarage = () => `${this.color} ${this.garage}`;
+
+//constructor functions with ES6 classes
+//syntactic sugar
+class House {
+  constructor(color, floors, garage, buildDate) {
+    this.color = color;
+    this.floors = floors;
+    this.garage = garage;
+    //below I created a Date object using a constructor
+    this.buildDate = new Date(buildDate);
+  }
+  getBuildDate(){
+    return this.buildDate.getFullYear();
+  }
+  getColorAndGarage() {
+    return `${this.color} ${this.garage}`;
+  }
+}
 //instantiate object
 const house1 = new House("yellow", "2", "true", "5-8-1979");
 const house2 = new House("pink", "1", "true", "7-19-2010");
@@ -451,5 +478,3 @@ console.log(house3.garage);
 console.log(house1.getBuildDate());
 //below I use the getColorAndGarage method created above
 console.log(house2.getColorAndGarage());
-
-//constructor functions with ES6 classes
