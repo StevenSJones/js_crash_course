@@ -68,6 +68,11 @@
     background: #333;
     color: #fff;
   }
+
+  .red {
+      background: red;
+      color: #fff;
+  }
   
   .error {
     background: orangered;
