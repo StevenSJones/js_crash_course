@@ -514,7 +514,6 @@ const ul = document.querySelector(".items");
 //used inner HTML to add HTML dynamically and change the text of the last el child with the tag ul
 // ul.lastElementChild.innerHTML = "<h1>Ello Guvna</h1>";
 
-
 //dynamically changing elements styling by selecting it with the querySelector method and changing the style of btn to blue
 // const btn = document.querySelector('.btn');
 // btn.style.background = 'blue';
@@ -528,32 +527,37 @@ const ul = document.querySelector(".items");
 
 // btn.addEventListener("click", (e) => {
 //   e.preventDefault();
-  //placed e in the console log so that when the click happens I can look at the event object
-  //i then grabbed the items last el child and changed the inner HTML that said ello guvna to hi there.
-  // document.querySelector('#my-form').style.background = '#red'
-  // document.querySelector('body').classList.add('bg-dark');
-  // document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hi there</h1>';
+//placed e in the console log so that when the click happens I can look at the event object
+//i then grabbed the items last el child and changed the inner HTML that said ello guvna to hi there.
+// document.querySelector('#my-form').style.background = '#red'
+// document.querySelector('body').classList.add('bg-dark');
+// document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hi there</h1>';
 
-  // document.querySelector('.items').firstElementChild.innerHTML = ('<h1>ello guvna</h1>');
+// document.querySelector('.items').firstElementChild.innerHTML = ('<h1>ello guvna</h1>');
 
-  // document.querySelector('.items').firstElementChild.fontcolor = ('red');
+// document.querySelector('.items').firstElementChild.fontcolor = ('red');
 // });
 
-const myForm = document.querySelector('#my-form');
-const nameInput = document.querySelector('#name');
-const emailInput = document.querySelector('#email');
-const msg = document.querySelector('.msg');
-const userList = document.querySelector('#users');
+const myForm = document.querySelector("#my-form");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const msg = document.querySelector(".msg");
+const userList = document.querySelector("#users");
 
-myForm.addEventListener('submit', onSubmit);
-
+//this is where the event listener is told to listen to the submit and to run the onSUbmit function which is defined below. It is ok to define it below because it doesn't run when the page is loaded, instead it runs in the event of a  click.
+myForm.addEventListener("submit", onSubmit);
+//the on submit function definition. This is what the function is to do when used.
 function onSubmit(e) {
   e.preventDefault();
 
-  if(nameInput.value === '' || emailInput.value === '') {
-    msg.innerHTML = 'Please enter all fields';
+  if (nameInput.value === "" || emailInput.value === "") {
+
+    msg.classList.add("error");
+    msg.innerHTML = "Please enter all fields";
+
+    //3000 milliseconds = 3 seconds
+    setTimeout(() => msg.remove(), 3000);
   } else {
-    console.log('success');
+    console.log("success");
   }
 }
-
