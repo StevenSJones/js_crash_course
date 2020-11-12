@@ -525,5 +525,6 @@ const btn = document.querySelector(".btn");
 
 btn.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("The button was clicked");
+  //placed e in the console log so that when the click happens I can look at the event object
+  console.log(e);
 });
