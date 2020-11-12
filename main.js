@@ -478,3 +478,17 @@ console.log(house3.garage);
 console.log(house1.getBuildDate());
 //below I use the getColorAndGarage method created above
 console.log(house2.getColorAndGarage());
+
+console.log(window);
+
+window.alert(1);
+
+//single element selectors:
+//getElementById is a method on the window object
+console.log(document.getElementById('my-form'));
+//querySelector is a method on the window object
+console.log(document.querySelector('.container'));
+
+
+
+//multiple element selectors 
