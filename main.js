@@ -489,6 +489,9 @@ console.log(document.getElementById('my-form'));
 //querySelector is a method on the window object
 console.log(document.querySelector('.container'));
 
-
-
 //multiple element selectors 
+//querySelector is the best to use and the newest. It returns a nodelist which is similar to an array
+console.log(document.querySelectorAll('.item'));
+//these two are antiquated and require some conversions if you wish to return an array.
+console.log(document.getElementsByClassName('item'));
+console.log(document.getElementsByTagName('li'));
