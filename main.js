@@ -498,3 +498,8 @@ console.log(document.getElementsByTagName("li"));
 const items = document.querySelectorAll('.item');
 //forEach item that is returned with the querySelectorAll method run just above, we console.log the item.
 items.forEach((item) => console.log(item));
+
+//using the querySelector() to select the element with the items tag and then creating a variable called ul with what returns.
+const ul = document.querySelector('.items');
+//using the remove method to remove the items that i placed in the ul variable just above
+ul.remove();
