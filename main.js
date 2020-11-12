@@ -431,15 +431,13 @@ console.log(furtherAdditionOfNums(12, 13));
 //   this.color = color;
 //   this.floors = floors;
 //   this.garage = garage;
-  //below I created a Date object using a constructor
-  // this.buildDate = new Date(buildDate);
-  //below I am creating the function getBuildDate and defining what buildDate is.
-  // this.getBuildDate = () => this.buildDate.getFullYear();
-  //below I am defining a new method called getColorAndGarage. It is a fuunction that returns the color and garage using template strings on this ocassion.
+//below I created a Date object using a constructor
+// this.buildDate = new Date(buildDate);
+//below I am creating the function getBuildDate and defining what buildDate is.
+// this.getBuildDate = () => this.buildDate.getFullYear();
+//below I am defining a new method called getColorAndGarage. It is a fuunction that returns the color and garage using template strings on this ocassion.
 //   this.getColorAndGarage = () => `${this.color} ${this.garage}`;
 // }
-
-
 
 //to create a prototype you type constructor.prototype.method then fat arrow and this.method.
 //The below code would replace line 436 and therefor remove the function from the constructor so that the function can be used in more instances and every object created with the constructor does NOT have to include the function(so it improves modularity in your code).
@@ -458,7 +456,7 @@ class House {
     //below I created a Date object using a constructor
     this.buildDate = new Date(buildDate);
   }
-  getBuildDate(){
+  getBuildDate() {
     return this.buildDate.getFullYear();
   }
   getColorAndGarage() {
@@ -484,14 +482,19 @@ console.log(window);
 window.alert(1);
 
 //single element selectors:
-//getElementById is a method on the window object
-console.log(document.getElementById('my-form'));
-//querySelector is a method on the window object
-console.log(document.querySelector('.container'));
+//getElementById is a method on the document object
+console.log(document.getElementById("my-form"));
+//querySelector is a method on the document object
+console.log(document.querySelector(".container"));
 
-//multiple element selectors 
-//querySelector is the best to use and the newest. It returns a nodelist which is similar to an array
-console.log(document.querySelectorAll('.item'));
+//multiple element selectors
+//querySelectorAll is the best to use and the newest. It returns a nodelist which is similar to an array
+console.log(document.querySelectorAll(".item"));
 //these two are antiquated and require some conversions if you wish to return an array.
-console.log(document.getElementsByClassName('item'));
-console.log(document.getElementsByTagName('li'));
+console.log(document.getElementsByClassName("item"));
+console.log(document.getElementsByTagName("li"));
+
+//using the querySelectorAll() to select all of the item tag and then creating a variable with what returns.
+const items = document.querySelectorAll('.item');
+//forEach item that is returned with the querySelectorAll method run just above, we console.log the item.
+items.forEach((item) => console.log(item));
