@@ -495,26 +495,35 @@ console.log(document.getElementsByClassName("item"));
 console.log(document.getElementsByTagName("li"));
 
 //using the querySelectorAll() to select all of the item tag and then creating a variable with what returns.
-const items = document.querySelectorAll('.item');
+const items = document.querySelectorAll(".item");
 //forEach item that is returned with the querySelectorAll method run just above, we console.log the item.
 items.forEach((item) => console.log(item));
 
 //using the querySelector() to select the element with the items tag and then creating a variable called ul with what returns.
-const ul = document.querySelector('.items');
+const ul = document.querySelector(".items");
 //using the remove method to remove the items that i placed in the ul variable just above
 
 // ul.remove();
 // ul.lastElementChild.remove();
 //used the textContent method on the first el child of the items with the ul tag to change the text
-ul.firstElementChild.textContent = 'Cheers';
+ul.firstElementChild.textContent = "Cheers";
 //used the innerText method to change the text of the second child in with the tag ul to change the text
-ul.children[1].innerText = 'Steven';
+ul.children[1].innerText = "Steven";
 //used inner HTML to add HTML dynamically and change the text of the last el child with the tag ul
-ul.lastElementChild.innerHTML = '<h1>Ello Guvna</h1>'
+ul.lastElementChild.innerHTML = "<h1>Ello Guvna</h1>";
 
 //dynamically changing elements styling by selecting it with the querySelector method and changing the style of btn to blue
-const btn = document.querySelector('.btn');
-btn.style.background = 'blue';
+// const btn = document.querySelector('.btn');
+// btn.style.background = 'blue';
 
 // const items = document.querySelector('.items');
 // items.style.textContent = 'red';
+
+//Events=============================================
+//event listener
+const btn = document.querySelector(".btn");
+
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("The button was clicked");
+});
