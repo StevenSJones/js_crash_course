@@ -502,4 +502,13 @@ items.forEach((item) => console.log(item));
 //using the querySelector() to select the element with the items tag and then creating a variable called ul with what returns.
 const ul = document.querySelector('.items');
 //using the remove method to remove the items that i placed in the ul variable just above
-ul.remove();
+
+// ul.remove();
+// ul.lastElementChild.remove();
+//used the textContent method on the first el child of the items with the ul tag to change the text
+ul.firstElementChild.textContent = 'Cheers';
+//used the innerText method to change the text of the second child in with the tag ul to change the text
+ul.children[1].innerText = 'Steven';
+//used inner HTML to add HTML dynamically and change the text of the last el child with the tag ul
+ul.lastElementChild.innerHTML = '<h1>Ello Guvna</h1>'
+
