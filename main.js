@@ -512,3 +512,9 @@ ul.children[1].innerText = 'Steven';
 //used inner HTML to add HTML dynamically and change the text of the last el child with the tag ul
 ul.lastElementChild.innerHTML = '<h1>Ello Guvna</h1>'
 
+//dynamically changing elements styling by selecting it with the querySelector method and changing the style of btn to blue
+const btn = document.querySelector('.btn');
+btn.style.background = 'blue';
+
+// const items = document.querySelector('.items');
+// items.style.textContent = 'red';
