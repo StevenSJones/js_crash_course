@@ -558,6 +558,24 @@ function onSubmit(e) {
     //3000 milliseconds = 3 seconds
     setTimeout(() => msg.remove(), 3000);
   } else {
-    console.log("success");
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
+
+    userList.appendChild(li);
+    
+    nameInput.value = '';
+    emailInput.value = '';
   }
 }
+
+/*------------------------------------------------------*/
+//We declared a function printTime(), which gets the current time from the date object, and prints it to the screen. We then called the function once every second, using the setInterval method.
+
+// function printTime() {
+//   var d = new Date();
+//   var hours = d.getHours();
+//   var mins = d.getMinutes();
+//   var secs = d.getSeconds();
+//   document.body.innerHTML = hours+":"+mins+":"+secs;
+// }
+// console.log(setInterval(printTime, 1000));
